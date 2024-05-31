@@ -1,0 +1,41 @@
+// Primary colors
+$clr-dark-cyan: hsl(158, 36%, 37%);
+$clr-dark-cyan-hover: hsl(157, 43%, 18%);
+$clr-cream: hsl(30, 38%, 92%);
+
+// Neutral colors
+$clr-very-dark-blue: hsl(212, 21%, 14%);
+$clr-dark-grayish-blue: hsl(228, 12%, 48%);
+$clr-white: hsl(0, 0%, 100%);
+
+// font-families
+$ff-body: "Montserrat", sans-serif;
+$ff-headings: "Fraunces", serif;
+
+// font-sizes
+$fs-s: 0.75rem; // 12px
+$fs-m: 0.875rem; // 14px
+$fs-l: 2rem; // 32px
+
+// font-weight
+$fw-normal: 400;
+$fw-semibold: 600;
+$fw-bold: 700;
+
+// spacing
+$space-s: 0.75rem; // 12px
+$space-m: 1rem; // 16px
+$space-ml: 1.125rem; // 18px
+$space-l: 1.25rem; // 20px
+$space-xl: 1.5rem; // 24px
+
+// utility
+$radius-xs: calc($space-m / 2);
+$radius-s: $space-s;
+$radius-full: 9999px;
+$card-width: clamp(
+  20.4375rem,
+  calc(20.4375rem + ((1vw - 0.2rem) * 6.4773)),
+  24rem
+);
+$card-padding: clamp(1.5rem, calc(1.5rem + ((1vw - 0.2rem) * 0.9091)), 2rem);

@@ -1,0 +1,30 @@
+@use "sass:color";
+@use "variables" as *;
+
+// mixins
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin button($color) {
+  // margin-top: auto;
+  border: none;
+  background-color: $color;
+  border-radius: 0.5rem;
+  padding: 0.85rem 2rem;
+  font-size: $fs-m;
+  color: $clr-white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+
+  &:hover {
+    background-color: color.scale($color, $lightness: -30%);
+  }
+}

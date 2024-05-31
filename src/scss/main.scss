@@ -1,0 +1,130 @@
+@use "variables" as *;
+@use "mixins" as *;
+@use "./resets";
+
+#main {
+  @include flex-col;
+  justify-content: center;
+  height: 100%;
+  min-height: 100svh;
+}
+
+.card {
+  background-color: $clr-white;
+  max-width: 21.4375rem;
+  margin-inline: auto;
+  border-radius: 10px;
+  overflow: hidden;
+
+  &__image {
+    display: flex;
+
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      filter: contrast(110%) brightness(90%);
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 37.5rem;
+    overflow: hidden;
+  }
+
+  &__content {
+    padding: $card-padding;
+    // padding:
+    display: flex;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &__overline {
+    font-size: $fs-s;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+  }
+
+  &__heading {
+    margin-top: $space-ml;
+    font-size: $fs-l;
+    line-height: 1;
+  }
+
+  &__body {
+    margin-top: $space-xl;
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    line-height: 1.65;
+    // margin-top: $space-m;
+  }
+
+  &__price {
+    margin-top: $space-l;
+    font-family: $ff-headings;
+    font-size: $fs-l;
+    color: $clr-dark-cyan;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+
+    span {
+      font-family: $ff-body;
+      font-size: $fs-m;
+      color: $clr-dark-grayish-blue;
+      letter-spacing: -0.02em;
+      text-decoration: line-through;
+      font-weight: normal;
+    }
+  }
+
+  &__button {
+    @include button($clr-dark-cyan);
+    margin-top: 22px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 0.875rem;
+      height: 1rem;
+      background: url("../assets/images/icon-cart.svg") no-repeat;
+    }
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.5rem;
+  justify-content: center;
+  padding-block: $space-l;
+
+  a {
+    color: $clr-dark-cyan;
+    transition: all ease-in-out 0.2s;
+
+    &:hover {
+      color: $clr-dark-cyan-hover;
+    }
+  }
+
+  @media screen and (min-width: 48rem) {
+    flex-direction: row;
+  }
+}

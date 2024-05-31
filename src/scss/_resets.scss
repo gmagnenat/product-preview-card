@@ -1,0 +1,74 @@
+@use "variables" as *;
+@use "mixins";
+
+// CSS RESET
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  justify-content: center;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: $clr-cream;
+  // color: $clr-white;
+  font-size: $fs-s;
+  font-family: $ff-body;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $ff-headings;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+a {
+  // color: $clr-white;
+  text-decoration: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :has(:target) {
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+  }
+}
