@@ -78,7 +78,7 @@
     align-items: center;
     gap: 1.2rem;
 
-    span {
+    del {
       font-family: $ff-body;
       font-size: $fs-m;
       color: $clr-dark-grayish-blue;
@@ -127,4 +127,16 @@ footer {
   @media screen and (min-width: 48rem) {
     flex-direction: row;
   }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
