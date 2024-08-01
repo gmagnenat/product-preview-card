@@ -24,13 +24,14 @@
   <body>
     <main id="main">
       <div class="card">
-        <div class="card__image">
+        <div class="card__image-wrapper">
           <picture>
             <source
               srcset="./assets/images/image-product-desktop.jpg"
               media="(min-width: 768px)"
             />
             <img
+              class="card__image"
               src="./assets/images/image-product-mobile.jpg"
               alt="Chanel parfum bottle on a white background surrounded by green leaves"
             />
@@ -57,11 +58,17 @@
       </div>
     </main>
 
-    <footer class="attribution">
+    <footer class="attribution footer">
       Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      <a
+        class="footer__link"
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
         >Frontend Mentor</a
-      >Coded by <a href="https://github.com/gmagnenat">Gwenaël Magnenat</a>
+      >Coded by
+      <a class="footer__link" href="https://github.com/gmagnenat"
+        >Gwenaël Magnenat</a
+      >
     </footer>
   </body>
 </html>
